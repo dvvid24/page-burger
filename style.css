@@ -1,0 +1,327 @@
+html {
+    font-size: 16px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+/* en tête */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+header .image1 img {
+    width: 40px;
+    height: 50px;
+    cursor: pointer;
+}
+
+header .headerparagraphe {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.image-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.image-dropdown img {
+    width: 100px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 10;
+    width: 200px;
+}
+
+.dropdown-btn {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.dropdown-btn:hover {
+    background-color: darkred;
+}
+
+.image-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+header .bouton button {
+    background-color: #7c0303;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* contenu */
+
+marquee{
+    behavior: slide;
+    direction: left;
+    background-color: red;
+    color: white;
+    width: 90%;
+}
+
+main {
+    display: block;
+}
+
+main .part1 img {
+    width: 100%;
+}
+
+main .part1 button {
+    display: block;
+    margin: 20px auto;
+    background-color: #7c0303;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.part2 h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    animation: zoomAnimation 2s infinite ease-in-out;
+    text-align: center;
+}
+
+.part2 p {
+    color: black;
+    padding: 15px;
+    text-align: center;
+}
+
+.program {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.program img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.program:hover img {
+    transform: scale(1.1);
+}
+
+.plus button {
+    display: block;
+    margin: 20px auto;
+    background-color: #eeb005;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@keyframes zoomAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    background-color: black; /* Ajout du fond noir */
+    padding: 20px; /* Ajout d'un padding pour espacer les images du bord */
+}
+
+.info img {
+    border: 2px solid white; /* Optionnel : ajoute une bordure blanche autour des images pour les démarquer */
+    border-radius: 10px; /* Optionnel : arrondit les coins des images */
+}
+
+.ajout {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.ajout div {
+    border-radius: 15px;
+    background-color: rgb(252, 232, 194);
+    transition: transform 0.3s ease;
+    padding: 10px;
+}
+
+.ajout div:hover {
+    transform: scale(1.1);
+}
+
+h3{
+    font-size: 2rem;
+    font-weight: bold;
+    animation: zoomAnimation 2s infinite ease-in-out;
+    text-align: center;
+}
+
+h4 {
+    margin-top: 10px;
+}
+
+/* pied */
+footer {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+    margin: 10px 0;
+}
+
+footer .application img {
+    height: 80px;
+    width: 200px;
+    margin: 10px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+footer .information {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+h5 {
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Responsiveness */
+@media (max-width: 768px){
+    .menu1{
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .headerparagraphe {
+        justify-content: center;
+    }
+
+    header .bouton button {
+        margin: 10px 0;
+    }
+
+    .program {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ajout {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    header .image1 img {
+        width: 30px;
+        height: 40px;
+    }
+
+    .dropdown-content {
+        width: 150px;
+    }
+
+    main .part1 button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .plus button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    footer .application img {
+        width: 150px;
+        height: 60px;
+    }
+}
